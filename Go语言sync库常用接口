@@ -1,0 +1,44 @@
+## sync.Once
+
+#### 定义
+
++ 在代码运行中使方法只执行一次的对象实现，而 **init** 函数是在文件包首次被加载时只执行一次
+
+#### 使用方法
+
++ ```go
+  var once sync.Once // once对象生命周期内保证func只执行一次
+  once.Do(func() {
+  	...
+  })
+  ```
+
+#### 实现解析
+
+```go
+type Once struct {
+   done uint32
+   m    Mutex
+}
+
+func (o *Once) Do(f func()) {
+   if atomic.LoadUint32(&o.done) == 0 {
+      o.doSlow(f) // o.done初始态为0，线程安全读取done
+   }
+}
+
+func (o *Once) doSlow(f func()) {
+   o.m.Lock() // 线程安全地执行f，并修改done值为1，保证在o的生命周期内不再执行
+   defer o.m.Unlock()
+   if o.done == 0 {
+      defer atomic.StoreUint32(&o.done, 1)
+      f()
+   }
+}
+```
+
+```
+sync.WaitGroup
+```
+
+​           
