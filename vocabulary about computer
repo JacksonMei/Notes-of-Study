@@ -1,0 +1,230 @@
+[Volumes]: https://kubernetes.io/docs/concepts/storage/volume
+
++ On-disk files 磁盘文件
++ ephemeral data 临时数据
++ non-trivial applications 重要应用程序
++ Familiarity with [Pods](https://kubernetes.io/docs/concepts/workloads/pods/) is suggested 建议熟悉下pod
++ simultaneously 同时地
++ the functionality is somewhat limited 功能非常有限
++ lifetime  寿命
++ lifecycle 生命周期
++ Consequently 因此
++ a pod ceases to exist  停止，  不在存在
++ preserved  保留
++ the root of the filesystem hierarchy 文件层次结构的根部
++ filesystem view composed from their Docker image and volumes 由docker镜像和卷组成的文件系统视图
++ provisioned  预分配
++ plugins 插件
++ request specific levels of resources 请求特定数量的资源
++ without exposing users to the details of how 不能向用户暴露***的细节
++ the comma-delimited, ordered list of values  逗号分隔的有序列表值
++ be in excess of what was requested 超出请求的
++ bi-directional binding 双向绑定
++ exclusive 排他的
++ eligible  合格的
++ distro 发行版本
++ in conjunction with 连同
++ preparatory  预备的
++ bare metal configuration 裸机配置
++ pod-eviction-timeout pod回收时限
++ the partitioned node 游离的节点
++ underlying infrastructure  下层基础设施
++ deduce  推断
++ keep sth up to date with sth, 将XXX与XXX保持同步
++ side effect 副作用
++ be nested inside 嵌套
++ Federation 联邦
+
+
+
+## System Design Interview
+
+intimidating 胆战心惊的
+open-ended 开放式的
+whereas 然而
+bottlenecks 瓶颈
+refinement 精炼 完善
+
+illustration 插图，示例
+
+is a paid service provided by 3rd parties 第三方付费服务
+
+is hosted by 被托管
+
+ super-low latency 超低时延
+
+failover and redundancy  故障转移和冗余
+
+Horizontal scaling 水平扩容（增加服务器数量）
+
+Vertical scaling 纵向扩容（增加单个服务器cpu、内存等配置）
+
+the availability of the web tier web可用性层级
+
+address those problems 解决这些问题
+
+mitigate 缓解
+
+read-through cache 读缓存
+
+code snippet 代码片段
+
+stale  过期，失鲜
+
+*SPOF*  Single Point Of Failure 单点故障（一旦失效，整个系统会故障）
+
+fallback 容错，应急备用的
+
+outage 停机期
+
+cope with  应对
+
+crucial 至关重要的
+
+decouple 解耦
+
+retention 留存
+
+ revenue 营业额
+
+leverage 利用
+
+ improve developer productivity 提高开发效率
+
+integration 集成
+
+loosely coupled and failure resilient  松耦合和故障弹性
+
+shard 分片
+
+exhaustion 耗尽的、疲惫的
+
+workaround 应急措施
+
+Scaling a system is an iterative process  扩展系统是一个迭代过程
+
+fine-tuning 微调
+
+boils down to 归根结底
+
+reveals 揭秘
+
+QPS query per second
+
+approximation 近似值
+
+ambiguity 分歧
+
+vague 含糊的
+
+unreasonably broad 不合情理的宽泛
+
+weariness 疲倦
+
+deceptively 欺骗性的
+
+underpins 支撑
+
+astonishing 令人惊叹的
+
+co-workers 同事
+
+ambiguous 迷惑含糊不清的 ambiguity 分歧
+
+delight in 乐在其中
+
+tradeoffs 权衡取舍
+
+tendency 倾向，取舍
+
+red flags include narrow mindedness, stubbornness   包括狭隘、固执的危险信号
+
+one-size-fits-all solution 一刀切的解决方案
+
+establish design scope 确立设计范围
+
+ace 超群顶流的
+
+takes pride in 引以为豪
+
+bonus points 加分
+
+reverse chronological order 时间倒序
+
+particular order 特定顺序
+
+feed 信息/动态
+
+blueprint 蓝图
+
+back-of-the-envelope calculations  初略计算
+
+get carried away with minute details 被微小的细节冲昏头脑
+
+ going clockwise 顺时针方向
+
+standard deviation 标准偏差
+
+hash collisions 哈希冲突
+
+forwards the request to web servers 将请求转发给web服务器
+
+uptime 正常运行时间， downtime 停机时间
+
+[fault-tolerant systems](https://en.wikipedia.org/wiki/Fault-tolerant_system). 容错系统
+
+conquer 征服
+
+also known as(aka) 亦称 
+
+Prevent resource starvation caused by Denial of Service (DoS) attack  防止Dos攻击导致的资源短缺
+
+blocking the excess calls 组织多余的调用
+
+bots or users’ misbehavior  机器或用户的异常行为
+
+pros and cons 优缺点
+
+throttle rules 限流规则
+
+server-side API / client-side API 服务器端/客户端API
+
+group chat / one-on-one chat 群聊/ 1对1聊天
+
+marketplace 应用超市
+
+low voice chat latency 低语音聊天时延
+
+nail down 敲定 明确
+
+at the very least 至少
+
+referrals 推荐
+
+actionable feedback 可操作的反馈
+
+donate to charity 捐钱给慈善机构
+
+encryption 加密
+
+attachment 附件
+
+recipients 收件人
+
+initiate request 发起请求
+
+time-tested 经过时间检验的
+
+polling 轮询
+
+progression  进展
+
+full-duple/ half-duplex 全双工、单工
+
+bidirectional 双向的
+
+leaves old semantics untouched 旧语义未受影响
+
+an HTTP CONNECT command is issued 发出http连接请求
+
+mutul 彼此的，相互的
