@@ -29,3 +29,19 @@ func test() {
 }
 ```
 
+#### 监控优雅退出
+
+```go
+stop := make(chan os.Signal)
+signal.Notify(stop, syscall.SIGTERM)
+
+for {
+    select {
+        case _, ok := <-stop:
+        if ok {
+            // graceExit()
+            os.Exit(1)
+        }
+    }
+}
+```
