@@ -12,6 +12,19 @@ if v, ok := <- ch; ok {
 }
 ```
 
+#### 控制函数只调用一次
+
+利用closed channel再次被close时会panic的特性控制函数只有一次调用
+
+```go
+var onlyOne = make(chan struct{})
+func test() {
+	close(onlyOne)
+    // do something
+    ... 
+}
+```
+
 #### 控制函数并发度
 
 如下函数test在多个线程中运行，但同时并发只能有5个实例，如在redis 连接池的处理
